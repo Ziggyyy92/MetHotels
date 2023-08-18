@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MetHotels';
+  
+
+  dodajSobu(naziv: HTMLInputElement, broj: HTMLInputElement, opis: HTMLInputElement): boolean {
+    console.log(`Dodavanje sobe naziv: ${naziv.value} sa brojem soba: ${broj.value} i opisom: ${opis.value}`);
+    return false;
+  }
 }
