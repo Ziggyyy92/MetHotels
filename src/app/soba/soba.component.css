@@ -1,0 +1,21 @@
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul li{
+    margin: 0;
+}
+
+p{
+    margin-bottom: 5px;
+}
+
+#poeni {
+    margin: 0;
+    max-height: 50%;
+}
+
+.row {
+    margin: 10px 10px 10px 0;
+}

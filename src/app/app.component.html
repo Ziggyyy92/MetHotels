@@ -14,12 +14,16 @@
         <input type="textarea" class="form-control" id="opis" placeholder="Opis" #noviOpis>
         <label for="opis">Opis</label>
       </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="link" placeholder="link" #noviLink>
+        <label for="link">Link</label>
+      </div>
       <div class="row d-flex justify-content-end">
-        <div class="btn btn-primary" (click)="dodajSobu(noviNaziv, noviBroj, noviOpis)">Dodaj</div>
+        <div class="btn btn-primary" (click)="dodajSobu(noviNaziv, noviBroj, noviLink, noviOpis)">Dodaj</div>
       </div>
     </form>
   </div>
-  <app-soba></app-soba>
+  <app-soba *ngFor="let soba of sobe" [soba]="soba"></app-soba>
 </div>
 
 

@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { Soba } from './soba.model';
 
 @Component({
@@ -9,20 +9,12 @@ import { Soba } from './soba.model';
 export class SobaComponent implements OnInit {
 
   @HostBinding('attr.class') cssClass = 'row';
-  soba: Soba;
+  @Input() soba!: Soba;
 
   constructor(){
-    this.soba = new Soba('Mala Slatka Tajna', 2, 'Apartman na zlatiboru', 5);
   }
 
-  voteUp() {
-    this.soba.glasovi += 1;
-    return false;
-    }
-    voteDown() {
-    this.soba.glasovi -= 1;
-    return false;
-    }
+
 
   ngOnInit(): void {
       

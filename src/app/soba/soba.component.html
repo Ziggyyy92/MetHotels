@@ -1,18 +1,28 @@
 <div class="row d-flex justify-content-center">
-        <div class="col-lg-2 alert alert-secondary"> 
-            <div class="vrednost">
-                <h2 class="text-center">3</h2>
-            </div>
-            <div class="poeni">
-                <p class="text-center">points</p>
+        <div class="col-lg-1 d-flex align-items-center"> 
+            <div id="poeni" class="alert alert-secondary">
+                <div class="vrednost">
+                    <h2 class="text-center">{{soba.glasovi}}</h2>
+                </div>
+                <div class="poeni">
+                    <p class="text-center">Poeni</p>
+                </div>
             </div>
         </div>
         <div class="col-lg-5">
             <div class="row">
-                <small>Naziv smestaja:</small>
-                <h2>{{soba.naziv}}</h2>
+                <a class="h2 text-decoration-none" href={{soba.link}}>{{soba.naziv}}</a>
+                <small class="text-muted">({{soba.domain()}})</small>
                 <small>Broj soba: {{soba.broj}}</small>
                 <p>Opis: {{soba.opis}}</p>
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item">
+                        <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" (click)="soba.voteUp()"><i class="bi bi-arrow-up-circle"></i> Svidja mi se</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" (click)="soba.voteDown()"><i class="bi bi-arrow-down-circle"></i> Ne svidja mi se</a>
+                    </li>
+                </ul>
             </div>
         </div>
 </div>
